@@ -24,9 +24,29 @@ app.use(bodyParser())
 /**
  * Routes
  */
-router.get('/registration', async (ctx, next) => {
+router.post('/registration', async ctx => {
     ctx.body = {
-        message: "registration route"
+        message: "post registration route"
+    }
+})
+router.get('/registrations', async ctx => {
+    ctx.body = {
+        message: "get registrations route"
+    }
+})
+router.get('/registration', async ctx => {
+    ctx.body = {
+        message: "get registration route"
+    }
+})
+router.put('/registration', async ctx => {
+    ctx.body = {
+        message: "put registration route"
+    }
+})
+router.delete('/registration', async ctx => {
+    ctx.body = {
+        message: "delete registration route"
     }
 })
 
