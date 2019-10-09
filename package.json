@@ -1,5 +1,8 @@
 {
   "name": "school-enrollment",
+  "jest": {
+    "testEnvironment": "node"
+  },
   "version": "1.0.0",
   "description": "A simple application to manage enrollment",
   "main": "./src/app.js",

@@ -3,12 +3,14 @@
  */
 const request = require('supertest')
 const server = require('../app')
+const databaseConnect = require('../config/database')
 
 /**
  * Pre-run and after-run config
  */
 beforeAll(async () => {
     console.log('Starting tests...')
+    await databaseConnect()
 })
 afterAll(() => {
     server.close()
