@@ -7,6 +7,7 @@
   "author": "messiasGeovani <messias.geovani.lima@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "jest": "^24.9.0"
+    "jest": "^24.9.0",
+    "supertest": "^4.0.2"
   }
 }
