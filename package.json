@@ -3,6 +3,11 @@
   "version": "1.0.0",
   "description": "A simple application to manage enrollment",
   "main": "./src/app.js",
+  "scripts": {
+    "start": "node ./src/app.js",
+    "test": "jest --watchAll",
+    "dev": "nodemon ./src/app.js"
+  },
   "repository": "https://github.com/messiasGeovani/nodejs-school-enrollment.git",
   "author": "messiasGeovani <messias.geovani.lima@gmail.com>",
   "license": "MIT",
