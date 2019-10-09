@@ -7,6 +7,9 @@ const logger = require('koa-logger')
 const json = require('koa-json')
 const bodyParser = require('koa-bodyparser')
 
+// register object methods
+const RegisterController = require('./controllers/registerController')
+
 
 /**
  * Starting the app and routes
@@ -29,31 +32,11 @@ const databaseConnect = require('./config/database')()
 /**
  * Routes
  */
-router.post('/registration', async ctx => {
-    ctx.body = {
-        message: "post registration route"
-    }
-})
-router.get('/registrations', async ctx => {
-    ctx.body = {
-        message: "get registrations route"
-    }
-})
-router.get('/registration', async ctx => {
-    ctx.body = {
-        message: "get registration route"
-    }
-})
-router.put('/registration', async ctx => {
-    ctx.body = {
-        message: "put registration route"
-    }
-})
-router.delete('/registration', async ctx => {
-    ctx.body = {
-        message: "delete registration route"
-    }
-})
+router.post('/registration', RegisterController.create)
+router.get('/registrations', RegisterController.index)
+router.get('/registration', RegisterController.show)
+router.put('/registration', RegisterController.edit)
+router.delete('/registration', RegisterController.remove)
 
 // creating routes
 app.use(router.routes())
