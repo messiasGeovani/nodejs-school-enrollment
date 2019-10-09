@@ -6,6 +6,7 @@ const Router = require('koa-router')
 const logger = require('koa-logger')
 const json = require('koa-json')
 const bodyParser = require('koa-bodyparser')
+const mongoose = require('mongoose')
 
 
 /**
@@ -20,6 +21,14 @@ const router = new Router()
 app.use(logger())
 app.use(json())
 app.use(bodyParser())
+
+/**
+ * Database connect
+ */
+mongoose.connect('mongodb+srv://developer:developer@cluster0-fexky.mongodb.net/school?retryWrites=true&w=majority', {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+})
 
 /**
  * Routes
