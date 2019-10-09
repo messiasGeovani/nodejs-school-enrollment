@@ -8,6 +8,7 @@
   "license": "MIT",
   "dependencies": {
     "jest": "^24.9.0",
+    "koa": "^2.8.2",
     "supertest": "^4.0.2"
   }
 }
