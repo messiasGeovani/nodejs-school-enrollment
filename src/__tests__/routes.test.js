@@ -26,7 +26,15 @@ describe('tests init', () => {
      */
     test('testing the registration route...', async () => {
         // acessing the route
-        const response = await request(server).get('/registration')
+        const response = await request(server)
+            .post('/registration')
+            .send({
+                name: "Messias",
+                age: "Geovani",
+                courses: [
+                    "Ds"
+                ]
+            })
 
         // checking the status
         expect(response.status).toEqual(200)

@@ -10,9 +10,8 @@ const Register = require('../models/School')
  module.exports = {
     //  insert data
      async create(ctx) {
-        ctx.body = {
-            message: "post registration route"
-        }
+         const register = await Register.create(ctx.req.query)
+         await register.save()
      },
     //  list all data
      async index(ctx) {
