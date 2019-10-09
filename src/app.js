@@ -31,7 +31,7 @@ router.get('/registration', async (ctx, next) => {
 // creating routes
 app.use(router.routes())
 // setting permission of all http methods
-app.use(allowedMethods())
+app.use(router.allowedMethods())
 // creating the server
 const server = app.listen(3000)
 module.exports = server
